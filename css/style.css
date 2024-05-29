@@ -1,0 +1,62 @@
+/* Pre-style-import */
+@import url('pre-style.css');
+
+/* base */
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100vh;
+  background-image: url('../img/bg.jpg');
+  background-size: cover;
+  background-position: center;
+  font-family: "M PLUS Rounded 1c";
+}
+
+/* menu-bar */
+.menu-bar {
+  width: 100%;
+  background: #5599c7;
+  text-align: center;
+}
+.menu-bar ul li {
+  display: inline-block;
+  width: 150px;
+  margin: 0 35px;
+  padding: 25px 0;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.menu-bar ul li:hover,
+.active {
+  background-color: #73b5e0;
+}
+.menu-bar ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+}
+
+/* sub-menu */
+.sub-menu-1 {
+  position: absolute;
+  background: #5599c7;
+  margin: 25px 0 0 0;
+  display: none;
+}
+.menu-bar ul li:hover .sub-menu-1 {
+  display: block;
+}
+.menu-bar ul li:hover .sub-menu-1 ul li {
+  padding: 20px 0;
+  display: block;
+  margin: 0;
+  width: 180px;
+  border-bottom: 1px dotted #fff;
+}
+.menu-bar ul li:hover .sub-menu-1 ul li:last-child {
+  border-bottom: none;
+}
